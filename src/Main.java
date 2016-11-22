@@ -8,32 +8,20 @@ public class Main {
     public static void main(String [] args)
     {
         Flower peonyD = new Peony();
-        Flower tupleD = new Tuple();
-        Flower peony = new Peony("red",11,16,true);
-        Flower tuple = new Tuple("red",11,16,false);
-        ArrayList<Flower> arrF = new ArrayList<Flower>(4);
+        Flower tulipD = new Tulip();
+        Flower peony = new Peony();
+        peony.setPrice(20);
+        ArrayList<Flower> arrF = new ArrayList<Flower>(3);
         arrF.add(peonyD);
-        arrF.add(tuple);
-        Boquet boquet = new Boquet(arrF);
-        System.out.println(boquet.toString());
-        boquet.addFlower(peony);
-        boquet.addFlower(tupleD);
-        System.out.println(boquet.toString());
+        arrF.add(tulipD);
+        Bouquet bouquet = new Bouquet(arrF);
+        bouquet.addFlower(peony);
+        Flower [] peonies = bouquet.search(new FlowerSpec("peony",FlowerColor.PINK,10,true));
+        for (Flower p : peonies) {
+            System.out.println(p.toString());
 
-        boquet.sortByPrice();
-        System.out.println(boquet.toString());
+        }
 
-        Flower f = boquet.findFlowerOfLen(11,11);
-        System.out.println(f.toString());
-
-        Store store = new Store();
-        store.addFlower(peony,peonyD,tuple,tupleD);
-        Boquet b = store.createBoquet();
-        store.addBoquet(b);
-        store.sellBoquet();
-
-        store.showFlowers();
-        store.showBoquets();
 
 
 

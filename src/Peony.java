@@ -3,23 +3,25 @@
  */
 public class Peony extends Flower
 {
-    public final String type = "peony";
+    //public final String type = "peony";
 
     public Peony()
     {
-        super("pink",10, 15, true);
-        System.out.format("You've created a default %s\n",this.type);
+        super(new FlowerSpec("peony",FlowerColor.PINK,10,true),15);
+        //super("pink",10, 15, true);
+        //System.out.format("You've created a default %s\n",this.type);
+        System.out.format("You've created a default %s\n", this.getSpec().getName());
 
     }
-    public Peony(String c, int l, int p, boolean isF){
-        super(c,l,p,isF);
+    public Peony(FlowerSpec s, double d){
+        super(s,d);
 
 
 
     }
 
     public String toString() {
-        return "Type: "+ type + super.toString();
+        return "**" + super.toString();
     }
 
 }

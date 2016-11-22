@@ -6,12 +6,12 @@ import java.util.Scanner;
 
 public class Store {
     public ArrayList<Flower> flowersInStore = new ArrayList<Flower>();
-    public ArrayList<Boquet> boquetsInStore = new ArrayList<Boquet>();
+    public ArrayList<Bouquet> boquetsInStore = new ArrayList<Bouquet>();
 
     public Store(){}
 
-    public Boquet createBoquet() {
-        Boquet yourBoquet = new Boquet();
+    public Bouquet createBoquet() {
+        Bouquet yourBouquet = new Bouquet();
         Scanner scan = new Scanner (System.in);
         System.out.println("Please, enter the amount of flowers:");
 
@@ -21,11 +21,11 @@ public class Store {
             showFlowers();
 
             int i = scan.nextInt();
-            yourBoquet.addFlower(flowersInStore.get(i));
+            yourBouquet.addFlower(flowersInStore.get(i));
             flowersInStore.remove(flowersInStore.get(i));
             size--;
         }
-        return yourBoquet;
+        return yourBouquet;
     }
 
     public void addFlower(Flower ... flowers) {
@@ -34,8 +34,8 @@ public class Store {
         }
     }
 
-    public void addBoquet(Boquet ... boquets) {
-        for(Boquet b : boquets ) {
+    public void addBoquet(Bouquet... bouquets) {
+        for(Bouquet b : bouquets) {
             boquetsInStore.add(b);
         }
 
@@ -51,12 +51,12 @@ public class Store {
 
     public void showBoquets() {
         System.out.println("Here the boquets from the store:");
-        for(Boquet b : boquetsInStore) {
+        for(Bouquet b : boquetsInStore) {
             System.out.println(b.toString());
         }
     }
 
-    public Boquet sellBoquet() {
+    public Bouquet sellBoquet() {
         showBoquets();
         System.out.println("Which one would you like?");
         Scanner scan = new Scanner (System.in);
@@ -64,17 +64,19 @@ public class Store {
 
 
         if(boquetsInStore.size()> i) {
-            Boquet yourBoquet = boquetsInStore.get(i);
-            boquetsInStore.remove(yourBoquet);
-            System.out.println("Here is your boquet!\n" + yourBoquet.toString());
+            Bouquet yourBouquet = boquetsInStore.get(i);
+            boquetsInStore.remove(yourBouquet);
+            System.out.println("Here is your boquet!\n" + yourBouquet.toString());
 
-            return yourBoquet;
+            return yourBouquet;
         }
         else {
             System.out.println("We don`t have such boquet %C");
             return null;
         }
     }
+
+
 
 
 

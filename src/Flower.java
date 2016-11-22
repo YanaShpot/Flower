@@ -4,26 +4,32 @@
 public class Flower {
 
 
-    public int length = 10;
-    public int price = 20;
-    public boolean isFresh = true;
-    public String colour;
+    private double price = 20;
+    private FlowerSpec spec;
+
+
     public Flower() {
 
     }
 
-    public Flower(String c, int l, int p, boolean isF) {
-        this.colour = c;
-        this.length = l;
+    public Flower(FlowerSpec s, double p) {
+        this.spec = s;
         this.price = p;
-        this.isFresh = isF;
 
     }
 
+    public void setPrice(float newPrice) {
+        this.price = newPrice;
+    }
+
+    public double getPrice() { return price; }
+
+    public FlowerSpec getSpec() { return spec; }
+
     @Override
     public String toString() {
-        return " Colour: " + colour + " Length: " + Integer.toString(length) + " Price: "
-                + Integer.toString(price) + " Is Fresh: " + Boolean.toString(isFresh) + "\n";
+        return "Name: " + spec.getName() + " Colour: " + spec.getCol() + " Length: " + Integer.toString(spec.getLen()) + " Price: "
+                + Double.toString(price) + " Is Fresh: " + Boolean.toString(spec.getFreshness()) + "\n";
     }
 
 
