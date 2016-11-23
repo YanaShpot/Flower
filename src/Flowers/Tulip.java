@@ -1,10 +1,10 @@
-import java.io.PrintStream;
+package Flowers;
 
 /**
  * Created by Yasya on 23.10.16.
  */
 public class Tulip extends Flower {
-    //public final String type = "tulip";
+    public final static String type = "tulip";
     public Tulip()
     {
         super(new FlowerSpec("tulip",FlowerColor.PURPLE,12,true),17);
@@ -19,6 +19,10 @@ public class Tulip extends Flower {
             throw new Exception("It's not tulip!") ;
         }
 
+    }
+
+    public String getType() {
+        return "It's a "+ type;
     }
 
     public String toString() {

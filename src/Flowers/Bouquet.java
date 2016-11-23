@@ -1,12 +1,13 @@
-/**
+package Flowers; /**
  * Created by Yasya on 04.10.16.
  */
+
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
 
-public class Bouquet {
+public class Bouquet extends Item {
     public ArrayList<Flower> arrOfF = new ArrayList<Flower>();
 
 
@@ -66,12 +67,12 @@ public class Bouquet {
         for(Flower f : arrOfF) {
             info = info + f.toString();
         }
-        info += "Bouquet`s price: " + Double.toString(this.getPrice()) + " Length: "
-                + Double.toString(this.getLength()) + " Freshness: " + Boolean.toString(this.isFresh());
+        info += "Flowers.Bouquet`s price: " + Double.toString(this.getPrice()) + " Length: "
+                + Double.toString(this.getLength()) + " Freshness: " + Boolean.toString(this.isFresh()) + "\n";
         return info;
     }
 
-    public void addFlower(Flower ...flowers) {
+    public void addFlowers(Flower...flowers) {
         for (Flower f : flowers) {
             arrOfF.add(f);
 
@@ -81,8 +82,8 @@ public class Bouquet {
     /*public void sortByPrice(){
 
         for (int i = 0; i< arrOfF.size() - 1; ++i) {
-            Flower f1 = arrOfF.get(0);
-            for (Flower f2 : arrOfF.subList(1,arrOfF.size() - arrOfF.indexOf(f1))) {
+            Flowers.Flower f1 = arrOfF.get(0);
+            for (Flowers.Flower f2 : arrOfF.subList(1,arrOfF.size() - arrOfF.indexOf(f1))) {
                 if (f1.getPrice() > f2.getPrice()) {
                     arrOfF.add(arrOfF.indexOf(f1),f2);
                     arrOfF.remove(f1);
@@ -93,7 +94,7 @@ public class Bouquet {
         }*/
 
 
-    public Flower[] search(FlowerSpec searchSpec) {
+    public Flower[] searchFlower(FlowerSpec searchSpec) {
         ArrayList<Flower> matchingFlowers= new ArrayList<Flower>();
         for (Iterator i = arrOfF.iterator(); i.hasNext(); ) {
             Flower f = (Flower)i.next();
@@ -107,6 +108,11 @@ public class Bouquet {
             i++;
         }
         return retmF;
+    }
+
+    public double price() {
+        return this.getPrice();
+
     }
 }
 

@@ -1,9 +1,11 @@
+package Flowers;
+
 /**
  * Created by Yasya on 23.10.16.
  */
 public class Peony extends Flower
 {
-    //public final String type = "peony";
+    public final static String type = "peony";
 
     public Peony()
     {
@@ -20,8 +22,15 @@ public class Peony extends Flower
 
     }
 
+
+
     public String toString() {
         return "**" + super.toString();
+    }
+
+
+    public String getType() {
+        return "It's a "+ type;
     }
 
 }

@@ -1,6 +1,8 @@
-/**
+package Flowers; /**
  * Created by Yasya on 04.10.16.
  */
+
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -21,7 +23,7 @@ public class Store {
             showFlowers();
 
             int i = scan.nextInt();
-            yourBouquet.addFlower(flowersInStore.get(i));
+            yourBouquet.addFlowers(flowersInStore.get(i));
             flowersInStore.remove(flowersInStore.get(i));
             size--;
         }

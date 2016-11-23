@@ -1,7 +1,11 @@
+package Flowers;
+
 /**
  * Created by Yasya on 04.10.16.
  */
-public class Flower {
+
+
+abstract class Flower {
 
 
     private double price = 20;
@@ -31,6 +35,10 @@ public class Flower {
         return "Name: " + spec.getName() + " Colour: " + spec.getCol() + " Length: " + Integer.toString(spec.getLen()) + " Price: "
                 + Double.toString(price) + " Is Fresh: " + Boolean.toString(spec.getFreshness()) + "\n";
     }
+
+    abstract String getType();
+
+
 
 
 
