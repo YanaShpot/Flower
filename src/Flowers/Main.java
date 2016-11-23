@@ -1,6 +1,7 @@
 package Flowers;
 import Flowers.Decorator.*;
 import Flowers.Strategy.CreditCardPaymentStrategy;
+import Flowers.Strategy.DHLDeliveryStrategy;
 import Flowers.Strategy.IDelivery;
 import Flowers.Strategy.PostDeliveryStrategy;
 
@@ -12,8 +13,7 @@ import java.util.LinkedList;
  */
 public class Main {
 
-    public static void main(String [] args)
-    {
+    public static void main(String [] args) throws Exception {
         Flower peonyD = new Peony();
         Flower tulipD = new Tulip();
         Flower peony = new Peony();
@@ -38,13 +38,25 @@ public class Main {
 
         //System.out.println(bouquet.toString());
 
-        LinkedList<Item> i = new LinkedList<Item>();
+        /*LinkedList<Item> i = new LinkedList<Item>();
         i.add(item);
-        System.out.println(i.getFirst().toString());
+
         CreditCardPaymentStrategy c = new CreditCardPaymentStrategy();
         PostDeliveryStrategy p = new PostDeliveryStrategy();
         Order o = new Order(c, p,i);
         o.processOrder();
+        bouquet.addFlowers(new Peony(),new Tulip(),new Tulip(new FlowerSpec("tulip",FlowerColor.WHITE,10,true),10));
+        o.addItem(bouquet);
+        o.removeItem(item);
+        o.setDeliveryStrategy(new DHLDeliveryStrategy());
+        o.setPaymentStrategy(new CreditCardPaymentStrategy());
+        o.processOrder();*/
+
+        Store s = new Store();
+        s.addBouquet(bouquet);
+        Order o2= s.makeOrder();
+        o2.processOrder();
+
 
 
 

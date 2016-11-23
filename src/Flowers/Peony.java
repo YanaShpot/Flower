@@ -15,8 +15,11 @@ public class Peony extends Flower
         System.out.format("You've created a default %s\n", this.getSpec().getName());
 
     }
-    public Peony(FlowerSpec s, double d){
+    public Peony(FlowerSpec s, double d) throws Exception {
         super(s,d);
+        if ( s.getName() != "peony" ) {
+            throw new Exception("It's not a peony!") ;
+        }
 
 
 

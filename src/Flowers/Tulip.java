@@ -16,7 +16,7 @@ public class Tulip extends Flower {
     public Tulip(FlowerSpec s, double p) throws Exception {
         super(s,p);
         if ( s.getName() != "tulip" ) {
-            throw new Exception("It's not tulip!") ;
+            throw new Exception("It's not a tulip!") ;
         }
 
     }
