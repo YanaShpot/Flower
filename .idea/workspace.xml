@@ -5,14 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a18f53b4-55f8-40ff-989f-5af6243b09bb" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Bouquet.java" afterPath="$PROJECT_DIR$/src/Flowers/Bouquet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Flower.java" afterPath="$PROJECT_DIR$/src/Flowers/Flower.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/FlowerColor.java" afterPath="$PROJECT_DIR$/src/Flowers/FlowerColor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/FlowerSpec.java" afterPath="$PROJECT_DIR$/src/Flowers/FlowerSpec.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Flowers/Main.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Peony.java" afterPath="$PROJECT_DIR$/src/Flowers/Peony.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Store.java" afterPath="$PROJECT_DIR$/src/Flowers/Store.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Tulip.java" afterPath="$PROJECT_DIR$/src/Flowers/Tulip.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flower/Flower.class" afterPath="$PROJECT_DIR$/out/production/Flower/Flower.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flower/Main.class" afterPath="$PROJECT_DIR$/out/production/Flower/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Flower/Peony.class" afterPath="$PROJECT_DIR$/out/production/Flower/Peony.class" />
@@ -171,6 +163,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="branch-for-task4" />
+      </map>
+    </option>
     <option name="PUSH_TAGS">
       <GitPushTagMode />
     </option>
@@ -638,7 +635,14 @@
       <option name="project" value="LOCAL" />
       <updated>1479788807832</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Task with Decorator and Strategy made">
+      <created>1479917483780</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1479917483780</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -684,7 +688,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Task with FlowerSpec made" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task with FlowerSpec made" />
+    <MESSAGE value="Task with Decorator and Strategy made" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task with Decorator and Strategy made" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
