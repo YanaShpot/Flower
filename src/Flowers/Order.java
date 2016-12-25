@@ -2,10 +2,11 @@ package Flowers;
 import java.util.LinkedList;
 import Flowers.Strategy.*;
 import java.util.*;
+import Flowers.Observer.Observable;
 /**
  * Created by Yasya on 22.11.16.
  */
-public class Order {
+public class Order extends Observable<LinkedList<Item>>{
     public LinkedList<Item> items = new LinkedList<Item>();
     public IPayment payment;
     public IDelivery delivery;
@@ -49,6 +50,8 @@ public class Order {
 
                 String s = delivery.deliver(items);
             System.out.println("\nHere is your order!\n" + s);
+        this.setState(items);
+
     }
 
     public void addItem (Item i) {

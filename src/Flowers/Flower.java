@@ -5,7 +5,7 @@ package Flowers;
  */
 
 
-abstract class Flower {
+public abstract class Flower {
 
 
     private double price = 20;

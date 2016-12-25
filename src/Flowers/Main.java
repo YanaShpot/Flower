@@ -4,6 +4,7 @@ import Flowers.Strategy.CreditCardPaymentStrategy;
 import Flowers.Strategy.DHLDeliveryStrategy;
 import Flowers.Strategy.IDelivery;
 import Flowers.Strategy.PostDeliveryStrategy;
+import Flowers.Observer.*;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -52,10 +53,17 @@ public class Main {
         o.setPaymentStrategy(new CreditCardPaymentStrategy());
         o.processOrder();*/
 
-        Store s = new Store();
+        Order order = new Order();
+        order.addItem(bouquet);
+        new PeonySupplierObserver(order);
+        new TulipSupplierObserver(order);
+        order.processOrder();
+
+
+       /* Store s = new Store();
         s.addBouquet(bouquet);
         Order o2= s.makeOrder();
-        o2.processOrder();
+        o2.processOrder();*/
 
 
 
